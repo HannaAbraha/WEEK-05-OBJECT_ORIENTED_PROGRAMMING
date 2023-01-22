@@ -64,9 +64,9 @@ class Menu {
         return prompt(` 
         0) exit
         1) create new nascar
-        2) view team
-        3) delete team
-        4) display all teams
+        2) view nascar
+        3) delete nascar
+        4) display all nascar
         `);
     }
 
@@ -80,12 +80,12 @@ class Menu {
         `)
     }
 
-    displayTeams() {
+    displayNascar() {
         let nascarString = '';
         for (let i = 0; i < this.nascar.length; i++) {
             nascarString += i + ') ' + this.nascar[i].name + '\n';
         }
-        alert(teamString);
+        alert(nascarString);
     }
 
     createNascar() {
@@ -116,8 +116,8 @@ class Menu {
     }
 
 deleteNascar() {
-    let index = prompt('Enter the index of the team you wish to delete:');
-    if (index > -1 && index < this.nascar.lentht) {
+    let index = prompt('Enter the index of the nascar you wish to delete:');
+    if (index > -1 && index < this.nascar.length) {
         this.nascar.splice(index, 1);
     }
 
@@ -129,7 +129,7 @@ createDriver() {
 }
 
 deleteDriver() {
-    let index = prompt('Enter the index of the player you wish to delete:');
+    let index = prompt('Enter the index of the driver you wish to delete:');
     if (index > -1 && index < this.selectedNascar.drivers.length) {
         this.selectedNascar.drivers.splice(index, 1);
     }
